@@ -1,0 +1,51 @@
+{
+  "name": "yri",
+  "version": "0.1.0",
+  "description": "Bring Yri back ⚡",
+  "main": ".dist/index.js",
+  "scripts": {
+    "ts-watch": "tsc --watch",
+    "build": "tsc",
+    "node-watch": "nodemon ./dist/src/index.js",
+    "dev": "concurrently \"npm run ts-watch\" \"npm run node-watch\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siatara/yri.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Andriann",
+    "email": "andrianina.rakoto2@gmail.com",
+    "url": "https://github.com/andriann-rak"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siatara/yri/issues"
+  },
+  "homepage": "https://github.com/siatara/yri#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "concurrently": "^7.1.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0",
+    "reflect-metadata": "^0.1.13"
+  }
+}
