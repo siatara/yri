@@ -25,10 +25,11 @@ jobs:
       - run: |
           cat << EOF > "$HOME/.npmrc"
           email=andrianina.rakoto2@gmail.com
-          //registry.npmjs.org/:_authToken=NPM_TOKEN
+          @siatara:registry=https://npm.pkg.github.com
+          //npm.pkg.github.com/:_authToken=NODE_AUTH_TOKEN
           EOF
         env:
-          NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
+          NODE_AUTH_TOKEN: ${{ secrets.GHP_SIATARA }}
 
       - run: cat $HOME/.npmrc
       - run: npm ci
@@ -51,7 +52,8 @@ jobs:
       - run: |
           cat << EOF > "$HOME/.npmrc"
           email=andrianina.rakoto2@gmail.com
-          //registry.npmjs.org/:_authToken=NPM_TOKEN
+          @siatara:registry=https://npm.pkg.github.com
+          //npm.pkg.github.com/:_authToken=NODE_AUTH_TOKEN
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
