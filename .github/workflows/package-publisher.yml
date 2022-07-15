@@ -41,9 +41,9 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
 
-      - run: rm -rf ./github
-      - run: npm ci
+      - run: rm -rf ./.github
       - run: npm run build
+      - run: npm version patch
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GHP_SIATARA}}

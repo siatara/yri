@@ -5,10 +5,7 @@
   "main": ".dist/index.js",
   "scripts": {
     "ts-watch": "tsc --watch",
-    "rm-dist": "if exist dist (rmdir dist /s /q)",
-    "move-type": "move ./dist/types ./dist/src",
-    "rename-src": "move dist/src dist/lib",
-    "build": "npm run rm-dist && tsc -b && npm run move-type && npm run rename-src",
+    "build": "tsc",
     "node-watch": "nodemon ./dist/src/index.js",
     "dev": "concurrently \"npm run ts-watch\" \"npm run node-watch\""
   },
