@@ -12,19 +12,19 @@ on:
       - '*'
 
 jobs:
-#  build:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version: 16
-#
-#      - run: if $HOME/.npmrc; then rm -rf $HOME/.npmrc; fi
-#      - run: npm ci
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: if $HOME/.npmrc; then rm -rf $HOME/.npmrc; fi
+      - run: npm ci
 
   publish-yri:
-#    needs: build
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -44,7 +44,7 @@ jobs:
           //registry.npmjs.org/:_authToken=NPM_SIATARA
           EOF
         env:
-          NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
+          NPM_SIATARA: ${{ secrets.NPM_SIATARA }}
 
       - run: rm -rf .github
       - run: npm ci
