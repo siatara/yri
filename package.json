@@ -1,8 +1,8 @@
 {
   "name": "@siatara/yri",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "Bring Yri back ⚡",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "ts-watch": "tsc --watch",
     "build": "tsc",
