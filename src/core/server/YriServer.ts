@@ -1,5 +1,5 @@
 import 'reflect-metadata'
-import { BootType } from '../../../types'
+import { BootType } from '../../types'
 import YriApp from './YriApp'
 import { createServer, Server as HttpServer } from 'http'
 import { MongoClient } from 'mongodb'

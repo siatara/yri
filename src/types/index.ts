@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
-import { METHOD } from '../src/enums'
+import { METHOD } from '../enums'
 
 export type httpVerbFactory = (path: string) => MethodDecorator
 export type ControllerFactory = (path: string) => ClassDecorator

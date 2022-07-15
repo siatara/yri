@@ -1,4 +1,4 @@
-import { ControllerFactory, Modules, Router } from '../../../types'
+import { ControllerFactory, Modules, Router } from '../../types'
 import { MetaDataKeys } from '../../enums'
 
 const { hasMetadata, getMetadata } = Reflect

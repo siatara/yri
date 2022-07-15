@@ -1,4 +1,4 @@
-import { Controller, Modules } from '../../../types'
+import { Controller, Modules } from '../../types'
 import { MetaDataKeys } from '../../enums'
 
 import cors from 'cors'

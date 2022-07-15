@@ -1,4 +1,4 @@
-import { Controller } from '../../../types'
+import { Controller } from '../../types'
 import { MetaDataKeys, METHOD } from '../../enums'
 
 const { hasMetadata, getMetadata } = Reflect
