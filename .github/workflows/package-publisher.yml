@@ -20,7 +20,17 @@ jobs:
         with:
           node-version: 16
 
-      - run: if $HOME/.npmrc; then rm -rf $HOME/.npmrc; fi
+      - run: rm -rf $HOME/.npmrc
+
+      - run: |
+          cat << EOF > "$HOME/.npmrc"
+          email=andrianina.rakoto2@gmail.com
+          //registry.npmjs.org/:_authToken=NPM_TOKEN
+          EOF
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
+
+      - run: ls $HOME/.npmrc
       - run: npm ci
 
   publish-yri:
