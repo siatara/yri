@@ -36,7 +36,7 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
 
-      - run: if $HOME/.npmrc; then rm -rf $HOME/.npmrc; fi
+      - run: rm -rf $HOME/.npmrc
 
       - run: |
           cat << EOF > "$HOME/.npmrc"
