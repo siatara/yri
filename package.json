@@ -1,5 +1,5 @@
 {
-  "name": "yri",
+  "name": "@siatara/yri",
   "version": "0.1.1",
   "description": "Bring Yri back ⚡",
   "main": ".dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siatara/yri.git"
+    "url": "git://github.com/siatara/yri.git"
   },
   "keywords": [],
   "author": {
