@@ -44,7 +44,6 @@ jobs:
       - run: rm -rf .github
       - run: npm ci
       - run: npm run build
-      - run: npm version patch
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GHP_SIATARA}}
