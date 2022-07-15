@@ -1,2 +1,5 @@
 /src
 /types
+.prettierrc
+.eslintrc.js
+tsconfig.json
