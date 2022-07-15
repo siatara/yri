@@ -41,10 +41,10 @@ jobs:
       - run: |
           cat << EOF > "$HOME/.npmrc"
           email=andrianina.rakoto2@gmail.com
-          //registry.npmjs.org/:_authToken=NPM_SIATARA
+          //registry.npmjs.org/:_authToken=NPM_TOKEN
           EOF
         env:
-          NPM_SIATARA: ${{ secrets.NPM_SIATARA }}
+          NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
 
       - run: rm -rf .github
       - run: npm ci
