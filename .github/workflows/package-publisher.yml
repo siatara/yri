@@ -36,6 +36,7 @@ jobs:
 
       - run: |
           cat << EOF > "$HOME/.npmrc"
+          email=andrianina.rakoto2@gmail.com
           //registry.npmjs.org/:_authToken=NPM_SIATARA
           EOF
         env:
