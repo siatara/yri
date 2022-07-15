@@ -6,7 +6,7 @@
   "scripts": {
     "ts-watch": "tsc --watch",
     "build": "tsc",
-    "node-watch": "nodemon ./dist/src/index.js",
+    "node-watch": "nodemon ./dist/index.js",
     "dev": "concurrently \"npm run ts-watch\" \"npm run node-watch\""
   },
   "repository": {
@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": {
-    "name": "Andriann",
+    "name": "andriann-rak",
     "email": "andrianina.rakoto2@gmail.com",
     "url": "https://github.com/andriann-rak"
   },
