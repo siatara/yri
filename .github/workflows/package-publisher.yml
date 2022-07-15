@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: 16
 
+      - run: if $HOME/.npmrc; then rm -rf $HOME/.npmrc; fi
+      - run: npm ci
+
   publish-yri:
     needs: build
     runs-on: ubuntu-latest
