@@ -46,8 +46,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
 
-        - run: ls $HOME/.npmrc
-
+      - run: ls $HOME/.npmrc
 
       - run: npm ci
       - run: npm run build
