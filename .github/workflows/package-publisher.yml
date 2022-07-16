@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-#      - run: npm ci
+      - run: npm ci
 
   publish-yri:
     needs: build-yri
@@ -33,7 +33,6 @@ jobs:
 
       - run: |
           cat << EOF > "$HOME/.npmrc"
-          email=andrianina.rakoto2@gmail.com
           //registry.npmjs.org/:_authToken=NPM_TOKEN
           EOF
         env:
