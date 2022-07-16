@@ -3,6 +3,9 @@
   "version": "0.1.2",
   "description": "Bring Yri back ⚡",
   "main": "dist/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "ts-watch": "tsc --watch",
     "build": "tsc",
