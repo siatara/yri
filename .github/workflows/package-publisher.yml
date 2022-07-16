@@ -1,7 +1,4 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
-
-name: Node.js Package
+name: Publish @siatara/yri
 
 on:
   push:
@@ -12,7 +9,7 @@ on:
       - '*'
 
 jobs:
-  build:
+  build-yri:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -21,7 +18,7 @@ jobs:
           node-version: 16
       - run: npm ci
 
-  publish-gpr:
+  publish-yri:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -34,14 +31,18 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
 
+      - run: rm -rf $HOME/.npmrc
+
       - run: |
           cat << EOF > "$HOME/.npmrc"
-          //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          email=andrianina.rakoto2@gmail.com
+          //registry.npmjs.org/:_authToken=NPM_TOKEN
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_SIATARA }}
 
-      - run: rm -rf ./github
+      - run: ls $HOME/.npmrc
+
       - run: npm ci
       - run: npm run build
       - run: npm publish
