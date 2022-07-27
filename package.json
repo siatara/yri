@@ -1,6 +1,6 @@
 {
   "name": "@siatara/yri",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bring Yri back ⚡",
   "main": "dist/index.js",
   "publishConfig": {
